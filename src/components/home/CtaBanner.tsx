@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { ContactForm } from "@/components/contact/ContactForm";
+import { ParentRegistrationForm } from "@/components/contact/ParentRegistrationForm";
 import { CourtAccent } from "@/components/visuals/CourtAccent";
 
 export function CtaBanner() {
@@ -40,9 +40,12 @@ export function CtaBanner() {
                 <span className="text-gradient-gold">TO LEVEL UP?</span>
               </h2>
               <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted sm:text-base">
-                Sign up an elementary student for Court Sessions or Hoop Lab—or
-                apply for Mentor Corps if you&apos;re a high school basketball
-                player ready to lead.
+                Sign up your elementary student for Court Sessions or Hoop Lab.
+                High school players can{" "}
+                <a href="/contact" className="text-gold hover:opacity-80">
+                  apply for Mentor Corps
+                </a>
+                .
               </p>
               <ul className="mt-8 space-y-3 text-sm text-muted">
                 <li className="flex items-center gap-3">
@@ -61,7 +64,7 @@ export function CtaBanner() {
             </div>
 
             <div className="rounded-2xl border border-border/80 bg-background/60 p-6 backdrop-blur-sm sm:p-8">
-              <ContactForm />
+              <ParentRegistrationForm />
             </div>
           </div>
         </motion.div>

@@ -5,35 +5,35 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { site } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Mentor Corps",
   description:
-    "Sign up your elementary student or apply as a high school mentor for Built 4 More.",
+    "Apply as a high school mentor for Built 4 More Mentor Corps.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageHeader
-        label="Contact"
+        label="Mentor Corps"
         title={
           <>
-            SIGN UP OR
+            STEP UP
             <br />
-            <span className="text-gradient-gold">STEP UP TO MENTOR</span>
+            <span className="text-gradient-gold">TO MENTOR</span>
           </>
         }
-        subtitle="Parents: register your K–5 student. High school players: apply for Mentor Corps. We'll get back to you within 48 hours."
+        subtitle="High school basketball players: apply for Mentor Corps. We'll get back to you within 48 hours with training dates and requirements."
       />
 
       <Section>
         <div className="grid gap-16 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <h2 className="font-[family-name:var(--font-bebas)] text-3xl tracking-wide">
-              GET IN TOUCH
+              MENTOR APPLICATION
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Whether your child is in kindergarten or you&apos;re a sophomore
-              on varsity—start here.
+              If you&apos;re on a school or club basketball team and ready to
+              lead younger kids, start here.
             </p>
 
             <ul className="mt-10 space-y-6">
@@ -51,8 +51,10 @@ export default function ContactPage() {
                 <p className="mt-1">{site.phone}</p>
               </li>
               <li>
-                <p className="text-xs uppercase tracking-[0.2em] text-gold">Location</p>
-                <p className="mt-1">{site.location}</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-gold">Parents</p>
+                <a href="/register" className="mt-1 block text-foreground hover:text-gold transition-colors">
+                  Register your elementary student →
+                </a>
               </li>
             </ul>
           </div>

@@ -28,7 +28,7 @@ export function ParentTrust() {
             little kids—not mini varsity practice.
           </SectionSubtitle>
           <a
-            href="#join"
+            href="/register"
             className="mt-8 inline-flex items-center text-sm font-semibold uppercase tracking-[0.2em] text-gold transition-opacity hover:opacity-80"
           >
             Register your child →

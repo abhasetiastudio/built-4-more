@@ -19,10 +19,10 @@ export function ContactForm() {
         className="rounded-2xl border border-gold/30 bg-gold-dim/20 p-12 text-center"
       >
         <p className="font-[family-name:var(--font-bebas)] text-4xl tracking-wide text-gold">
-          MESSAGE RECEIVED
+          APPLICATION RECEIVED
         </p>
         <p className="mt-4 text-muted">
-          Thanks—we&apos;ll be in touch within 48 hours.
+          Thanks—we&apos;ll follow up within 48 hours with Mentor Corps next steps.
         </p>
       </motion.div>
     );
@@ -33,18 +33,6 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label htmlFor="interest" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
-          I&apos;m interested in
-        </label>
-        <select id="interest" name="interest" required className={inputClass}>
-          <option value="">Select one</option>
-          <option value="elementary">Signing up my elementary child</option>
-          <option value="mentor">High school — becoming a mentor</option>
-          <option value="both">Both / have questions</option>
-        </select>
-      </div>
-
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
@@ -75,44 +63,43 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="childGrade" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
-          Child&apos;s grade (if signing up elementary)
+        <label htmlFor="grade" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
+          Grade
         </label>
-        <select id="childGrade" name="childGrade" className={inputClass}>
-          <option value="">Select grade or N/A</option>
-          <option value="k">Kindergarten</option>
-          <option value="1">1st Grade</option>
-          <option value="2">2nd Grade</option>
-          <option value="3">3rd Grade</option>
-          <option value="4">4th Grade</option>
-          <option value="5">5th Grade</option>
-          <option value="na">N/A — mentor applicant</option>
+        <select id="grade" name="grade" required className={inputClass}>
+          <option value="">Select grade</option>
+          <option value="9">9th Grade</option>
+          <option value="10">10th Grade</option>
+          <option value="11">11th Grade</option>
+          <option value="12">12th Grade</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="program" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
-          Program
+        <label htmlFor="schoolTeam" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
+          School / Team
         </label>
-        <select id="program" name="program" className={inputClass}>
-          <option value="">Select a program</option>
-          <option value="hoop-lab">Hoop Lab (K–2)</option>
-          <option value="court-sessions">Court Sessions (3–5)</option>
-          <option value="mentor-corps">Mentor Corps (high school)</option>
-          <option value="unsure">Not sure yet</option>
-        </select>
+        <input
+          id="schoolTeam"
+          name="schoolTeam"
+          type="text"
+          required
+          className={inputClass}
+          placeholder="e.g. Lincoln HS varsity"
+        />
       </div>
 
       <div>
         <label htmlFor="message" className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
-          Message
+          Why do you want to mentor?
         </label>
         <textarea
           id="message"
           name="message"
           rows={5}
+          required
           className={`${inputClass} resize-none`}
-          placeholder="Tell us about your child or your experience as a player..."
+          placeholder="Tell us about your basketball experience and why you want to lead younger kids..."
         />
       </div>
 
@@ -122,7 +109,7 @@ export function ContactForm() {
         whileTap={{ scale: 0.98 }}
         className="w-full rounded-full bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-background transition-colors hover:bg-gold-light sm:w-auto sm:px-12"
       >
-        Send Message
+        Apply for Mentor Corps
       </motion.button>
     </form>
   );

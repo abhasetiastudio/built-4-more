@@ -118,9 +118,12 @@ export default function AboutPage() {
             Apply for Mentor Corps or sign your elementary student up for Court
             Sessions or Hoop Lab.
           </p>
-          <Button href="/contact" className="mt-10">
-            Get in Touch
-          </Button>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button href="/register">Register Student</Button>
+            <Button href="/contact" variant="secondary">
+              Apply to Mentor
+            </Button>
+          </div>
         </div>
       </Section>
     </>

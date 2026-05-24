@@ -79,12 +79,15 @@ export default function ProgramsPage() {
             PARENT OR HIGH SCHOOL PLAYER?
           </SectionTitle>
           <p className="mx-auto mt-6 max-w-lg text-muted">
-            Tell us which program fits—you&apos;re signing up a child or applying
-            to mentor—and we&apos;ll follow up with dates and details.
+            Parents: register your K–5 student. High school players: apply for
+            Mentor Corps. We&apos;ll follow up with dates and details.
           </p>
-          <Button href="/contact" className="mt-10">
-            Contact Us
-          </Button>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button href="/register">Register Student</Button>
+            <Button href="/contact" variant="secondary">
+              Apply to Mentor
+            </Button>
+          </div>
         </div>
       </Section>
     </>
