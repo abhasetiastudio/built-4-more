@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
-import { supabase } from "@/lib/supabase";
 
 type RegistrationForm = {
   parent_name: string;
@@ -103,30 +102,36 @@ export function ParentRegistrationForm() {
     setLoading(true);
 
     try {
-      const { error: insertError } = await supabase.from("registrations").insert({
-        parent_name: form.parent_name,
-        parent_email: form.parent_email,
-        parent_phone: form.parent_phone || null,
-        student_name: form.student_name,
-        student_age: Number(form.student_age),
-        student_grade: form.student_grade,
-        school_name: form.school_name,
-        basketball_experience: form.basketball_experience,
-        leadership_goals: form.leadership_goals || null,
-        additional_notes: form.additional_notes || null,
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          parent_name: form.parent_name,
+          parent_email: form.parent_email,
+          parent_phone: form.parent_phone,
+          student_name: form.student_name,
+          student_age: Number(form.student_age),
+          student_grade: form.student_grade,
+          school_name: form.school_name,
+          basketball_experience: form.basketball_experience,
+          leadership_goals: form.leadership_goals,
+          additional_notes: form.additional_notes,
+        }),
       });
 
-      if (insertError) {
-        throw insertError;
+      const result = (await response.json().catch(() => null)) as {
+        success?: boolean;
+        error?: string;
+      } | null;
+
+      if (!response.ok) {
+        setError(result?.error ?? "Something went wrong. Please try again.");
+        return;
       }
 
       setSubmitted(true);
-    } catch (err) {
-      const message =
-        err && typeof err === "object" && "message" in err && typeof err.message === "string"
-          ? err.message
-          : "Something went wrong. Please try again.";
-      setError(message);
+    } catch {
+      setError("Unable to reach the server. Please try again.");
     } finally {
       setLoading(false);
     }
