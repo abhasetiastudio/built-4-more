@@ -82,7 +82,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              OLDER ON THE
+              BUILT TO COMPETE.
             </motion.span>
           </span>
           <span className="block overflow-hidden">
@@ -92,17 +92,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 0.9, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
             >
-              COURT. BUILT FOR
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden">
-            <motion.span
-              className="block"
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, delay: 0.44, ease: [0.22, 1, 0.36, 1] }}
-            >
-              WHAT&apos;S NEXT.
+              BUILT TO LEAD.
             </motion.span>
           </span>
         </motion.h1>

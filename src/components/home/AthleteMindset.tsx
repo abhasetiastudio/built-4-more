@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Section, SectionLabel, SectionTitle } from "@/components/ui/Section";
-import { mentorLessons } from "@/lib/constants";
+import { mentorLessons, founder } from "@/lib/constants";
 import { CourtAccent } from "@/components/visuals/CourtAccent";
 import { ThreePointArc } from "@/components/visuals/CourtMotif";
 
@@ -23,8 +23,8 @@ export function AthleteMindset() {
           </SectionTitle>
           <p className="mt-6 max-w-lg text-[15px] leading-[1.75] text-muted sm:text-lg sm:leading-relaxed">
             It&apos;s not babysitting with a basketball. Our mentors are players
-            who show up trained, prepared, and invested—because teaching a 3rd
-            grader to believe in themselves makes them better leaders too.
+            who show up trained, prepared, and invested—because teaching an elementary kid
+            to believe in themselves makes them better leaders too.
           </p>
 
           <motion.div
@@ -41,7 +41,7 @@ export function AthleteMindset() {
             <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-transparent" />
             <div className="relative flex h-full flex-col items-center justify-center p-8 text-center">
               <p className="text-[10px] uppercase tracking-[0.3em] text-gold/70">
-                Mentor · Grade 10
+                {founder.title} · {founder.name}
               </p>
               <p className="mt-4 font-[family-name:var(--font-bebas)] text-3xl leading-tight tracking-wide sm:text-4xl">
                 &ldquo;I WISH I HAD THIS

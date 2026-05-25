@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { LeadershipPillars } from "@/components/home/LeadershipPillars";
 import { MissionStatement } from "@/components/home/MissionStatement";
 import { ParentTrust } from "@/components/home/ParentTrust";
-import { Testimonials } from "@/components/home/Testimonials";
+import { WhatWeBelieve } from "@/components/home/WhatWeBelieve";
 import { Marquee } from "@/components/landing/Marquee";
 
 export default function LandingPage() {
@@ -16,7 +16,7 @@ export default function LandingPage() {
       <LeadershipPillars />
       <AthleteMindset />
       <ParentTrust />
-      <Testimonials />
+      <WhatWeBelieve />
       <CtaBanner />
     </>
   );

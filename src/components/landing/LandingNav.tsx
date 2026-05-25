@@ -9,7 +9,7 @@ const sections = [
   { href: "#pillars", label: "Pillars" },
   { href: "#mindset", label: "Mindset" },
   { href: "#parents", label: "Parents" },
-  { href: "#stories", label: "Stories" },
+  { href: "#beliefs", label: "Beliefs" },
 ] as const;
 
 export function LandingNav() {

@@ -1,7 +1,7 @@
 export const site = {
   name: "Built 4 More",
   tagline: "High school leaders. Elementary confidence.",
-  email: "hello@built4more.com",
+  email: "built4more@abhasetia.studio",
   phone: "(555) 123-4567",
   location: "Greater Metro Area",
 } as const;
@@ -41,7 +41,7 @@ export const founder = {
     {
       title: "Mentors grow too",
       description:
-        "Teaching a 3rd grader to believe in themselves makes you a better leader on your own team.",
+        "Teaching an elementary kid to believe in themselves makes you a better leader on your own team.",
     },
     {
       title: "Structure matters",
@@ -136,24 +136,22 @@ export const programs = [
   },
 ] as const;
 
-export const testimonials = [
+export const beliefs = [
   {
-    quote:
-      "My 4th grader was shy at first. After a few weeks with his high school mentor, he dribbles into the driveway and actually talks about being a good teammate.",
-    author: "Jennifer R.",
-    role: "Parent · 4th grade",
+    title: "SPORTS ARE BIGGER THAN THE SCOREBOARD.",
+    body: "Winning matters. Growth matters more. We believe the game should build confidence, resilience, discipline, and character that lasts far beyond the final buzzer.",
   },
   {
-    quote:
-      "Mentoring the little kids made me think about how I lead on my team. I'm more patient, and I take school more seriously too.",
-    author: "Jordan K.",
-    role: "10th grade · Mentor Corps",
+    title: "LEADERSHIP STARTS BEFORE ADULTHOOD.",
+    body: "Young athletes are already becoming teammates, communicators, role models, and decision makers. We want them to recognize that now — not years later.",
   },
   {
-    quote:
-      "It's not a random teenager babysitting—they're basketball players who've been trained to teach. That difference matters to us.",
-    author: "Marcus & Ana D.",
-    role: "Parents · 2nd & 5th grade",
+    title: "CONFIDENCE IS BUILT THROUGH CHALLENGE.",
+    body: "Real growth happens when athletes step outside their comfort zone, learn to respond to adversity, and discover what they're capable of under pressure.",
+  },
+  {
+    title: "GREAT PLAYERS AREN'T ALWAYS GREAT LEADERS — BUT THEY CAN BECOME BOTH.",
+    body: "Built 4 More exists to help athletes grow not just in skill, but in mindset, accountability, presence, and the way they impact people around them.",
   },
 ] as const;
 
