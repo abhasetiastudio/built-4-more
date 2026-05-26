@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { ParentRegistrationForm } from "@/components/contact/ParentRegistrationForm";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/ui/Section";
-import { site } from "@/lib/constants";
+import { site, leadershipWeek } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Register",
   description:
-    "Register your K–5 elementary student for Built 4 More basketball and leadership sessions.",
+    "Register your K–7 student for Built 4 More Leadership Week.",
 };
 
 export default function RegisterPage() {
@@ -22,7 +22,7 @@ export default function RegisterPage() {
             <span className="text-gradient-gold">ELEMENTARY STUDENT</span>
           </>
         }
-        subtitle="Parents: register your K–5 student for Hoop Lab or Court Sessions. We'll follow up within 48 hours with program details."
+        subtitle="Parents: register your K–7 student for Leadership Week. We'll follow up within 48 hours with program details."
       />
 
       <Section>
@@ -39,8 +39,8 @@ export default function RegisterPage() {
 
             <ul className="mt-10 space-y-6">
               <li>
-                <p className="text-xs uppercase tracking-[0.2em] text-gold">Programs</p>
-                <p className="mt-1">Hoop Lab (K–2) · Court Sessions (3–5)</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-gold">Program</p>
+                <p className="mt-1">{leadershipWeek.fullName}</p>
               </li>
               <li>
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">Questions?</p>

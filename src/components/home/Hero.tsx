@@ -115,16 +115,16 @@ export function Hero() {
           className="mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:items-center sm:gap-4"
         >
           <a
-            href="#join"
+            href="/register"
             className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-background shadow-[0_0_48px_-10px_var(--gold-glow)] transition-all hover:bg-gold-light"
           >
-            Sign Up Your Child
+            Register Now
           </a>
           <a
-            href="#pillars"
+            href="#leadership-week"
             className="inline-flex items-center justify-center rounded-full border border-gold/35 px-8 py-3.5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-gold transition-all hover:border-gold/60 hover:bg-gold-dim"
           >
-            What They&apos;ll Learn
+            Explore The Week
           </a>
         </motion.div>
 
@@ -135,9 +135,9 @@ export function Hero() {
           className="mt-16 grid grid-cols-3 gap-4 border-t border-border/80 pt-8 sm:mt-20 sm:gap-8 sm:pt-10 md:max-w-xl"
         >
           {[
-            { value: "15+", label: "Avg. Mentor Age" },
-            { value: "K–5", label: "Elementary Focus" },
-            { value: "1:6", label: "Mentor to Kid Ratio" },
+            { value: "5", label: "Day Experience" },
+            { value: "6–8", label: "Athletes Max" },
+            { value: "K–7", label: "Grade Levels" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}

@@ -1,7 +1,7 @@
+import { LeadershipWeek } from "@/components/camp/LeadershipWeek";
 import { AthleteMindset } from "@/components/home/AthleteMindset";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Hero } from "@/components/home/Hero";
-import { LeadershipPillars } from "@/components/home/LeadershipPillars";
 import { MissionStatement } from "@/components/home/MissionStatement";
 import { ParentTrust } from "@/components/home/ParentTrust";
 import { WhatWeBelieve } from "@/components/home/WhatWeBelieve";
@@ -13,7 +13,7 @@ export default function LandingPage() {
       <Hero />
       <Marquee />
       <MissionStatement />
-      <LeadershipPillars />
+      <LeadershipWeek />
       <AthleteMindset />
       <ParentTrust />
       <WhatWeBelieve />

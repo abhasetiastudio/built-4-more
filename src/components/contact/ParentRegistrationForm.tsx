@@ -60,8 +60,8 @@ function validate(form: RegistrationForm): FieldErrors {
     errors.student_age = "Student age is required.";
   } else {
     const age = Number(form.student_age);
-    if (!Number.isInteger(age) || age < 5 || age > 11) {
-      errors.student_age = "Please enter a valid age between 5 and 11.";
+    if (!Number.isInteger(age) || age < 5 || age > 13) {
+      errors.student_age = "Please enter a valid age between 5 and 13.";
     }
   }
 
@@ -261,7 +261,7 @@ export function ParentRegistrationForm() {
             name="student_age"
             type="number"
             min={5}
-            max={11}
+            max={13}
             className={inputClass}
             aria-invalid={Boolean(fieldErrors.student_age)}
             aria-describedby={fieldErrors.student_age ? "student_age-error" : undefined}
@@ -293,6 +293,8 @@ export function ParentRegistrationForm() {
           <option value="3">3rd Grade</option>
           <option value="4">4th Grade</option>
           <option value="5">5th Grade</option>
+          <option value="6">6th Grade</option>
+          <option value="7">7th Grade</option>
         </select>
         {fieldErrors.student_grade && (
           <p id="student_grade-error" className={errorClass}>

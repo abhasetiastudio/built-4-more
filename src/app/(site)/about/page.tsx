@@ -67,7 +67,7 @@ export default function AboutPage() {
                 </p>
                 <p className="mt-8 font-[family-name:var(--font-bebas)] text-4xl leading-tight tracking-wide">
                   TEACHING
-                  <span className="text-gold"> K–5 </span>
+                  <span className="text-gold"> K–7 </span>
                   ON THE COURT
                 </p>
               </div>

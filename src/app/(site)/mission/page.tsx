@@ -108,7 +108,7 @@ export default function MissionPage() {
         <SectionLabel>For Elementary Kids</SectionLabel>
         <SectionTitle>WHAT WE BUILD ON THE COURT</SectionTitle>
         <p className="mt-6 max-w-2xl text-muted">
-          These are the outcomes we track—for every K–5 student in our programs.
+          These are the outcomes we track—for every K–7 student in our programs.
         </p>
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {pillars.map((pillar) => (

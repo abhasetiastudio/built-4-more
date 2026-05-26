@@ -1,18 +1,20 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { site } from "@/lib/constants";
+import { primaryNavLinks, site } from "@/lib/constants";
 
-const sections = [
-  { href: "#mission", label: "Mission" },
-  { href: "#pillars", label: "Pillars" },
-  { href: "#mindset", label: "Mindset" },
-  { href: "#parents", label: "Parents" },
-  { href: "#beliefs", label: "Beliefs" },
-] as const;
+function navHref(href: string, pathname: string) {
+  if (href.startsWith("#")) {
+    return pathname === "/" ? href : `/${href}`;
+  }
+  return href;
+}
 
 export function LandingNav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -21,6 +23,10 @@ export function LandingNav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -42,31 +48,48 @@ export function LandingNav() {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10 lg:px-16">
-          <a href="#" className="group">
+          <Link href="/" className="group">
             <span className="font-[family-name:var(--font-bebas)] text-xl tracking-[0.2em] md:text-2xl">
               {site.name.toUpperCase()}
             </span>
-          </a>
+          </Link>
 
           <ul className="hidden items-center gap-1 md:flex">
-            {sections.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-muted transition-colors hover:text-gold"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {primaryNavLinks.map((item) => {
+              const href = navHref(item.href, pathname);
+              const isPageLink = item.href.startsWith("/");
+              const active = isPageLink && pathname.startsWith(item.href);
+
+              return (
+                <li key={item.href}>
+                  {isPageLink ? (
+                    <Link
+                      href={href}
+                      className={`px-3 py-2 text-[11px] font-medium uppercase tracking-[0.22em] transition-colors hover:text-gold ${
+                        active ? "text-gold" : "text-muted"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={href}
+                      className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-muted transition-colors hover:text-gold"
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
-          <a
-            href="#join"
+          <Link
+            href="/register"
             className="hidden rounded-full border border-gold/35 bg-gold-dim px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold transition-all hover:border-gold/60 hover:bg-gold/20 md:inline-flex"
           >
-            Join
-          </a>
+            Register
+          </Link>
 
           <button
             type="button"
@@ -96,34 +119,49 @@ export function LandingNav() {
             className="fixed inset-0 z-[55] bg-background/98 backdrop-blur-xl md:hidden"
           >
             <ul className="flex h-full flex-col items-center justify-center gap-8">
-              {sections.map((item, i) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
-                  <a
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="font-[family-name:var(--font-bebas)] text-4xl tracking-[0.15em]"
+              {primaryNavLinks.map((item, i) => {
+                const href = navHref(item.href, pathname);
+                const isPageLink = item.href.startsWith("/");
+
+                return (
+                  <motion.li
+                    key={item.href}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
                   >
-                    {item.label.toUpperCase()}
-                  </a>
-                </motion.li>
-              ))}
+                    {isPageLink ? (
+                      <Link
+                        href={href}
+                        onClick={() => setOpen(false)}
+                        className="font-[family-name:var(--font-bebas)] text-4xl tracking-[0.15em]"
+                      >
+                        {item.label.toUpperCase()}
+                      </Link>
+                    ) : (
+                      <a
+                        href={href}
+                        onClick={() => setOpen(false)}
+                        className="font-[family-name:var(--font-bebas)] text-4xl tracking-[0.15em]"
+                      >
+                        {item.label.toUpperCase()}
+                      </a>
+                    )}
+                  </motion.li>
+                );
+              })}
               <motion.li
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <a
-                  href="#join"
+                <Link
+                  href="/register"
                   onClick={() => setOpen(false)}
                   className="mt-4 inline-block rounded-full bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-wider text-background"
                 >
-                  Sign Up
-                </a>
+                  Register
+                </Link>
               </motion.li>
             </ul>
           </motion.div>

@@ -1,5 +1,5 @@
 import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
+import { LandingNav } from "@/components/landing/LandingNav";
 
 export default function SiteLayout({
   children,
@@ -8,7 +8,7 @@ export default function SiteLayout({
 }) {
   return (
     <>
-      <Navbar />
+      <LandingNav />
       <main className="flex-1">{children}</main>
       <Footer />
     </>

@@ -79,7 +79,7 @@ export default function ProgramsPage() {
             PARENT OR HIGH SCHOOL PLAYER?
           </SectionTitle>
           <p className="mx-auto mt-6 max-w-lg text-muted">
-            Parents: register your K–5 student. High school players: apply for
+            Parents: register your K–7 student. High school players: apply for
             Mentor Corps. We&apos;ll follow up with dates and details.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

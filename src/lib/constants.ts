@@ -1,12 +1,22 @@
 export const site = {
   name: "Built 4 More",
-  tagline: "High school leaders. Elementary confidence.",
+  tagline: "BUILT TO COMPETE.\nBUILT TO LEAD.",
   email: "built4more@abhasetia.studio",
   phone: "(555) 123-4567",
   location: "Greater Metro Area",
 } as const;
 
-/** Primary nav — Contact is the header CTA only */
+/** Header nav — same on homepage and all inner pages */
+export const primaryNavLinks = [
+  { href: "#mission", label: "Mission" },
+  { href: "#leadership-week", label: "Leadership Week" },
+  { href: "#mindset", label: "Mindset" },
+  { href: "#parents", label: "Parents" },
+  { href: "#beliefs", label: "Beliefs" },
+  { href: "/founder", label: "Founder" },
+] as const;
+
+/** Footer explore links */
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/mission", label: "Mission" },
@@ -26,11 +36,15 @@ export const founder = {
   bio: [
     "Abir Bajaj founded Built 4 More to connect high school basketball players with elementary students—leadership through mentorship, not another camp.",
     "He started as a high school player who saw what older teammates could offer younger kids—and believed every elementary student deserved that same investment from someone just a few years ahead.",
-    "He's still involved today: building the Mentor Corps, training high school leaders, and making sure every session stays kid-first—confidence and character before highlights.",
   ],
   quote: {
     text: "This was never about turning me into your coach.",
-    highlight: "It's about high school players becoming leaders younger kids can trust.",
+    addendum: {
+      body: [
+        "I wanted to be there for younger athletes in a way I didn't always have growing up.",
+        "Not just to help with basketball — but to help kids build confidence, leadership, resilience, and belief in themselves both on and off the court.",
+      ],
+    },
   },
   principles: [
     {
@@ -155,6 +169,71 @@ export const beliefs = [
   },
 ] as const;
 
+/** Flagship cohort experiences — add future camps here as additional entries */
+export const leadershipWeek = {
+  slug: "leadership-week",
+  name: "Built 4 More Leadership Week",
+  week: "August 10–15",
+  fullName: "Built 4 More Leadership Week · August 10–15",
+  subtitle:
+    "A 5-day leadership and basketball development experience designed to help young athletes build confidence, communication, resilience, and leadership — on and off the court.",
+  details: [
+    { label: "August 10–15" },
+    { label: "5-Day Cohort Experience" },
+    { label: "Tentative Time" },
+    { label: "Grades K–7" },
+    { label: "Limited to 6–8 Athletes" },
+    { label: "Northville / Novi Area" },
+    { label: "Founding Summer Cohort" },
+  ],
+  why: [
+    "Built 4 More was created to help athletes grow beyond the game.",
+    "This week-long experience combines basketball training, leadership development, competitive challenges, and intentional reflection in a small-group environment designed to build confidence, accountability, communication, and resilience.",
+    "More than a camp, this is a space for athletes to challenge themselves, connect with teammates, and begin developing the mindset needed for success both on and off the court.",
+  ],
+  themes: [
+    {
+      day: "Monday",
+      title: "Confidence",
+      body: "Learning how to carry yourself, communicate, and compete with belief.",
+    },
+    {
+      day: "Tuesday",
+      title: "Communication",
+      body: "Building stronger teammate habits and leadership presence.",
+    },
+    {
+      day: "Wednesday",
+      title: "Accountability",
+      body: "Owning actions, effort, discipline, and response to mistakes.",
+    },
+    {
+      day: "Thursday",
+      title: "Resilience",
+      body: "Learning how to respond under pressure and adversity.",
+    },
+    {
+      day: "Friday",
+      title: "Leadership",
+      body: "Using your influence to positively impact others.",
+    },
+  ],
+  differentiators: [
+    "Small-group experience (6–8 athletes max)",
+    "Leadership-focused development",
+    "Competitive basketball training",
+    "Reflection and mindset sessions",
+    "Intentional mentorship environment",
+    "Friday parent showcase and athlete reflections",
+  ],
+  cta: {
+    title: "Ready To Join The Founding Cohort?",
+    subtitle: "Limited spots available for the first Built 4 More Leadership Week · August 10–15.",
+    buttonLabel: "Register Now",
+    href: "/register",
+  },
+} as const;
+
 export const faqs = [
   {
     question: "Who are the mentors?",
@@ -222,7 +301,7 @@ export const trustPoints = [
   {
     title: "Built for Elementary Kids",
     description:
-      "Curriculum, group sizes, and language are designed for grades K–5—not shrunk-down high school practice.",
+      "Curriculum, group sizes, and language are designed for grades K–7—not shrunk-down high school practice.",
   },
   {
     title: "Parents Stay in the Loop",

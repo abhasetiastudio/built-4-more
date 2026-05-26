@@ -20,11 +20,8 @@ export default function FounderPage() {
         label="About Abir"
         title={
           <>
-            {founder.name.split(" ")[0].toUpperCase()}
-            <br />
-            <span className="text-gradient-gold">
-              {founder.name.split(" ")[1]?.toUpperCase() ?? ""}
-            </span>
+            {founder.name.split(" ")[0]}{" "}
+            <span className="text-gradient-gold">{founder.name.split(" ")[1]}</span>
           </>
         }
         subtitle={founder.tagline}

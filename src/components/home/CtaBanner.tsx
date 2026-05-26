@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { ParentRegistrationForm } from "@/components/contact/ParentRegistrationForm";
+import { leadershipWeek } from "@/lib/constants";
 import { CourtAccent } from "@/components/visuals/CourtAccent";
 
 export function CtaBanner() {
@@ -32,29 +33,25 @@ export function CtaBanner() {
           <div className="relative grid gap-12 p-8 sm:p-12 lg:grid-cols-2 lg:gap-16 lg:p-16">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-gold">
-                Get Started
+                Founding Cohort
               </p>
               <h2 className="mt-5 font-[family-name:var(--font-bebas)] text-[clamp(2.5rem,8vw,4.5rem)] leading-[0.92] tracking-wide lg:text-7xl">
-                READY FOR YOUR KID
+                SECURE YOUR
                 <br />
-                <span className="text-gradient-gold">TO LEVEL UP?</span>
+                <span className="text-gradient-gold">SPOT THIS SUMMER</span>
               </h2>
               <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted sm:text-base">
-                Sign up your elementary student for Court Sessions or Hoop Lab.
-                High school players can{" "}
-                <a href="/contact" className="text-gold hover:opacity-80">
-                  apply for Mentor Corps
-                </a>
-                .
+                Register for {leadershipWeek.fullName}—a 5-day small-group
+                experience for grades K–7 in the Northville / Novi area.
               </p>
               <ul className="mt-8 space-y-3 text-sm text-muted">
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-gold" />
-                  Elementary programs · grades K–5
+                  6–8 athletes · founding summer cohort
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-gold" />
-                  High school mentors · trained & supervised
+                  Tentative time · details to follow
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-gold" />
