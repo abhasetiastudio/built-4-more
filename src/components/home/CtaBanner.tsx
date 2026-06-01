@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { ParentRegistrationForm } from "@/components/contact/ParentRegistrationForm";
-import { leadershipWeek } from "@/lib/constants";
+import { Button } from "@/components/ui/Button";
+import { foundingCohort } from "@/lib/constants";
 import { CourtAccent } from "@/components/visuals/CourtAccent";
 
 export function CtaBanner() {
@@ -30,39 +30,29 @@ export function CtaBanner() {
             className="!bottom-4 !left-4 !translate-x-0 !translate-y-0"
           />
 
-          <div className="relative grid gap-12 p-8 sm:p-12 lg:grid-cols-2 lg:gap-16 lg:p-16">
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-gold">
-                Founding Cohort
-              </p>
-              <h2 className="mt-5 font-[family-name:var(--font-bebas)] text-[clamp(2.5rem,8vw,4.5rem)] leading-[0.92] tracking-wide lg:text-7xl">
-                SECURE YOUR
-                <br />
-                <span className="text-gradient-gold">SPOT THIS SUMMER</span>
-              </h2>
-              <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted sm:text-base">
-                Register for {leadershipWeek.fullName}—a 5-day small-group
-                experience for grades K–7 in the Northville / Novi area.
-              </p>
-              <ul className="mt-8 space-y-3 text-sm text-muted">
-                <li className="flex items-center gap-3">
+          <div className="relative max-w-2xl p-8 sm:p-12 lg:p-16">
+            <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-gold">
+              {foundingCohort.label}
+            </p>
+            <h2 className="mt-5 font-[family-name:var(--font-bebas)] text-[clamp(2.5rem,8vw,4.5rem)] leading-[0.92] tracking-wide lg:text-7xl">
+              SECURE YOUR
+              <br />
+              <span className="text-gradient-gold">SPOT THIS SUMMER</span>
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-muted sm:text-base">
+              {foundingCohort.description}
+            </p>
+            <ul className="mt-8 space-y-3 text-sm text-muted">
+              {foundingCohort.bullets.map((item) => (
+                <li key={item} className="flex items-center gap-3">
                   <span className="h-1 w-1 rounded-full bg-gold" />
-                  6–8 athletes · founding summer cohort
+                  {item}
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="h-1 w-1 rounded-full bg-gold" />
-                  Tentative time · details to follow
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="h-1 w-1 rounded-full bg-gold" />
-                  We reply within 48 hours
-                </li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-border/80 bg-background/60 p-6 backdrop-blur-sm sm:p-8">
-              <ParentRegistrationForm />
-            </div>
+              ))}
+            </ul>
+            <Button href="/register" className="mt-10">
+              Register Now
+            </Button>
           </div>
         </motion.div>
       </FadeIn>

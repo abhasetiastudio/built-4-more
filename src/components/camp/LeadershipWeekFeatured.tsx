@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion/FadeIn";
+import { FadeIn } from "@/components/motion/FadeIn";
 import {
   Section,
   SectionLabel,
@@ -30,18 +30,6 @@ export function LeadershipWeekFeatured() {
           <span className="mt-4 block">{leadershipWeek.subtitle}</span>
         </SectionSubtitle>
       </FadeIn>
-
-      <StaggerContainer className="mt-14 grid gap-3 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-        {leadershipWeek.details.map((detail) => (
-          <StaggerItem key={detail.label}>
-            <div className="rounded-xl border border-border/80 bg-surface/40 px-6 py-5 transition-colors duration-300 hover:border-gold/30 hover:bg-surface-elevated/50">
-              <p className="font-[family-name:var(--font-bebas)] text-xl tracking-wide text-foreground sm:text-2xl">
-                {detail.label.toUpperCase()}
-              </p>
-            </div>
-          </StaggerItem>
-        ))}
-      </StaggerContainer>
     </Section>
   );
 }

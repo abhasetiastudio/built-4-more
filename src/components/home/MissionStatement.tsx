@@ -46,8 +46,13 @@ export function MissionStatement() {
                 The Model
               </p>
               <blockquote className="mt-4 font-[family-name:var(--font-bebas)] text-[clamp(1.75rem,5vw,2.5rem)] leading-[1.05] tracking-wide">
-                &ldquo;When a 15-year-old shows a 4th grader how to lead,
-                <span className="text-gold"> both of them grow.&rdquo;</span>
+                &ldquo;A lot of players waste time trying to figure out basic
+                stuff that could&apos;ve been taught from the start.
+                <span className="text-gold">
+                  {" "}
+                  Built 4 More is my way of giving younger players that
+                  advantage.&rdquo;
+                </span>
               </blockquote>
               <p className="mt-5 text-sm text-muted">
                 — {founder.name}, {founder.title}

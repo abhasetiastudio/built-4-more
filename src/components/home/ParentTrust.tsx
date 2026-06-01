@@ -23,9 +23,9 @@ export function ParentTrust() {
             <span className="text-gradient-gold">YOUR KID TRUSTS.</span>
           </SectionTitle>
           <SectionSubtitle>
-            Handing your elementary student to a high schooler takes trust. We
-            train every mentor, keep adults on site, and design sessions for
-            little kids—not mini varsity practice.
+            You want your kid learning the right way—not guessing their way
+            through the game. Built 4 More brings structure, fundamentals, and
+            adult oversight so progress is real and visible.
           </SectionSubtitle>
           <a
             href="/register"

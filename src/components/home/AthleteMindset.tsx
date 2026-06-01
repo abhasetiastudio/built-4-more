@@ -15,16 +15,17 @@ export function AthleteMindset() {
 
       <div className="relative grid gap-14 lg:grid-cols-2 lg:gap-24">
         <FadeIn>
-          <SectionLabel>From the High School Line</SectionLabel>
+          <SectionLabel>From the Founder</SectionLabel>
           <SectionTitle>
-            WHAT A 15-YEAR-OLD
+            IMPROVE FASTER
             <br />
-            <span className="text-gradient-gold">CAN OFFER YOUR KID</span>
+            <span className="text-gradient-gold">AND SMARTER</span>
           </SectionTitle>
           <p className="mt-6 max-w-lg text-[15px] leading-[1.75] text-muted sm:text-lg sm:leading-relaxed">
-            It&apos;s not babysitting with a basketball. Our mentors are players
-            who show up trained, prepared, and invested—because teaching an elementary kid
-            to believe in themselves makes them better leaders too.
+            This isn&apos;t about highlights or shortcuts. Sessions are built
+            around the basics that actually stick—taught with structure,
+            repetition, and the kind of effort that comes from learning it the
+            hard way.
           </p>
 
           <motion.div
@@ -44,9 +45,12 @@ export function AthleteMindset() {
                 {founder.title} · {founder.name}
               </p>
               <p className="mt-4 font-[family-name:var(--font-bebas)] text-3xl leading-tight tracking-wide sm:text-4xl">
-                &ldquo;I WISH I HAD THIS
+                &ldquo;I&apos;M STILL GROWING, STILL LEARNING—
                 <br />
-                <span className="text-gradient-gold">WHEN I WAS THEIR AGE.&rdquo;</span>
+                <span className="text-gradient-gold">
+                  AND I WANT YOUNGER PLAYERS TO START WITH WHAT I DIDN&apos;T
+                  HAVE.&rdquo;
+                </span>
               </p>
             </div>
           </motion.div>

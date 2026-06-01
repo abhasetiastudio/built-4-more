@@ -65,7 +65,7 @@ export function Hero() {
         >
           <span className="h-px w-8 bg-gold md:w-14" />
           <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-gold sm:text-xs sm:tracking-[0.35em]">
-            High School Mentors · Elementary Leaders
+            Fundamentals First · Built From Experience
           </span>
         </motion.div>
 
@@ -103,9 +103,9 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.55 }}
           className="mt-7 max-w-md text-[15px] leading-[1.7] text-muted sm:mt-8 sm:max-w-xl sm:text-lg sm:leading-relaxed"
         >
-          Built 4 More pairs high school basketball players with elementary
-          kids—confidence, teamwork, and leadership taught by someone your
-          child can actually look up to.
+          Built 4 More gives young players the foundation too many miss early
+          on—real fundamentals, full effort, and steady work so kids build
+          confidence and skill the right way from day one.
         </motion.p>
 
         <motion.div

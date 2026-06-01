@@ -21,6 +21,12 @@ export function LeadershipWeekCta() {
         <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-muted sm:text-lg">
           {cta.subtitle}
         </p>
+        <p className="mx-auto mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-gold sm:text-base">
+          {cta.noCost}
+        </p>
+        <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-muted sm:text-base sm:leading-relaxed">
+          {cta.pilotNote}
+        </p>
         <Button href={cta.href} className="mt-10">
           {cta.buttonLabel}
         </Button>

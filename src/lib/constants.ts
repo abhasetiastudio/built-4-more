@@ -152,22 +152,37 @@ export const programs = [
 
 export const beliefs = [
   {
-    title: "SPORTS ARE BIGGER THAN THE SCOREBOARD.",
-    body: "Winning matters. Growth matters more. We believe the game should build confidence, resilience, discipline, and character that lasts far beyond the final buzzer.",
+    title: "EFFORT EVERY TIME.",
+    body: "Showing up and giving full energy.",
   },
   {
-    title: "LEADERSHIP STARTS BEFORE ADULTHOOD.",
-    body: "Young athletes are already becoming teammates, communicators, role models, and decision makers. We want them to recognize that now — not years later.",
+    title: "FUNDAMENTALS FIRST.",
+    body: "Building real skills from the basics.",
   },
   {
-    title: "CONFIDENCE IS BUILT THROUGH CHALLENGE.",
-    body: "Real growth happens when athletes step outside their comfort zone, learn to respond to adversity, and discover what they're capable of under pressure.",
+    title: "CONSISTENCY.",
+    body: "Getting better through steady work.",
   },
   {
-    title: "GREAT PLAYERS AREN'T ALWAYS GREAT LEADERS — BUT THEY CAN BECOME BOTH.",
-    body: "Built 4 More exists to help athletes grow not just in skill, but in mindset, accountability, presence, and the way they impact people around them.",
+    title: "CONFIDENCE.",
+    body: "Learning to trust your training.",
+  },
+  {
+    title: "GROWTH MINDSET.",
+    body: "Always improving, no matter your level.",
   },
 ] as const;
+
+export const foundingCohort = {
+  label: "Founding Cohort",
+  description:
+    "Register for Leadership Week—the founding cohort built around fundamentals, effort, and consistency. Grades K–7 · Northville / Novi area · limited spots.",
+  bullets: [
+    "6–8 athletes · founding summer cohort",
+    "Tentative time · details to follow",
+    "We reply within 48 hours",
+  ],
+} as const;
 
 /** Flagship cohort experiences — add future camps here as additional entries */
 export const leadershipWeek = {
@@ -176,46 +191,37 @@ export const leadershipWeek = {
   week: "August 10–15",
   fullName: "Built 4 More Leadership Week · August 10–15",
   subtitle:
-    "A 5-day leadership and basketball development experience designed to help young athletes build confidence, communication, resilience, and leadership — on and off the court.",
-  details: [
-    { label: "August 10–15" },
-    { label: "5-Day Cohort Experience" },
-    { label: "Tentative Time" },
-    { label: "Grades K–7" },
-    { label: "Limited to 6–8 Athletes" },
-    { label: "Northville / Novi Area" },
-    { label: "Founding Summer Cohort" },
-  ],
+    "A 5-day fundamentals-first experience—effort, consistency, and the small details that actually matter long term. Built to help players improve faster and smarter, not just harder.",
   why: [
-    "Built 4 More was created to help athletes grow beyond the game.",
-    "This week-long experience combines basketball training, leadership development, competitive challenges, and intentional reflection in a small-group environment designed to build confidence, accountability, communication, and resilience.",
-    "More than a camp, this is a space for athletes to challenge themselves, connect with teammates, and begin developing the mindset needed for success both on and off the court.",
+    "Most young players don't get a real foundation early—they play games or practice, but miss the details that matter long term.",
+    "Leadership Week focuses on fundamentals, effort, and consistency in a small group where every rep counts.",
+    "It's also about passing on what Abir's learned so far in his own journey—while he's still in it.",
   ],
   themes: [
     {
       day: "Monday",
-      title: "Confidence",
-      body: "Learning how to carry yourself, communicate, and compete with belief.",
+      title: "Effort Every Time",
+      body: "Showing up with full energy.",
     },
     {
       day: "Tuesday",
-      title: "Communication",
-      body: "Building stronger teammate habits and leadership presence.",
+      title: "Fundamentals First",
+      body: "Building real skills from the basics.",
     },
     {
       day: "Wednesday",
-      title: "Accountability",
-      body: "Owning actions, effort, discipline, and response to mistakes.",
+      title: "Consistency",
+      body: "Getting better through steady work.",
     },
     {
       day: "Thursday",
-      title: "Resilience",
-      body: "Learning how to respond under pressure and adversity.",
+      title: "Confidence",
+      body: "Learning to trust your training.",
     },
     {
       day: "Friday",
-      title: "Leadership",
-      body: "Using your influence to positively impact others.",
+      title: "Growth Mindset",
+      body: "Always improving, no matter your level.",
     },
   ],
   differentiators: [
@@ -229,6 +235,9 @@ export const leadershipWeek = {
   cta: {
     title: "Ready To Join The Founding Cohort?",
     subtitle: "Limited spots available for the first Built 4 More Leadership Week · August 10–15.",
+    noCost: "No Cost to Participate",
+    pilotNote:
+      "The Founding Summer Cohort is a limited-capacity pilot experience and will be offered at no cost to participating athletes. Our focus is on creating an exceptional experience, gathering feedback, and building a strong foundation for future Built 4 More programs.",
     buttonLabel: "Register Now",
     href: "/register",
   },
@@ -270,20 +279,20 @@ export const faqs = [
 /** What high school mentors bring to elementary sessions */
 export const mentorLessons = [
   {
-    title: "Someone Who Gets It",
-    body: "Mentors were kids not long ago. They speak in a way that lands—less lecture, more \"here's what worked for me.\"",
+    title: "Fundamentals First",
+    body: "Footwork, form, habits—the small details that compound. Taught clearly from the start, not left to figure out alone.",
   },
   {
-    title: "Basketball They Can Touch",
-    body: "Dribbling, passing, footwork—broken down by players who still practice it every day, at a pace little kids can follow.",
+    title: "Effort Every Time",
+    body: "Full energy every session. The standard is showing up ready and working with purpose.",
   },
   {
-    title: "Effort Over Highlights",
-    body: "High school athletes show what trying hard looks like—hustle, encouragement, and celebrating teammates.",
+    title: "Consistency",
+    body: "Steady work beats random intensity. Improvement comes from repeating the right things over time.",
   },
   {
-    title: "Leadership by Example",
-    body: "How to line up, listen, high-five, and bounce back—mentors model the behavior they want the next generation to carry.",
+    title: "Growth Mindset",
+    body: "Miss a rep, adjust, go again. Always improving—no matter where you're starting from.",
   },
 ] as const;
 
@@ -301,7 +310,7 @@ export const trustPoints = [
   {
     title: "Built for Elementary Kids",
     description:
-      "Curriculum, group sizes, and language are designed for grades K–7—not shrunk-down high school practice.",
+      "Curriculum built for grades K–7—fundamentals, effort, and consistency at their level, not chaos or cut-down varsity practice.",
   },
   {
     title: "Parents Stay in the Loop",

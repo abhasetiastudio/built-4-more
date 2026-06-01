@@ -25,8 +25,8 @@ export function WhatWeBelieve() {
           <span className="text-gradient-gold">BELIEVE</span>
         </SectionTitle>
         <SectionSubtitle className="mx-auto max-w-2xl text-center">
-          Not slogans—convictions we build every session around. For parents
-          raising kids and athletes finding their voice early.
+          The values this program is built on—not slogans, but how every session
+          is run.
         </SectionSubtitle>
       </FadeIn>
 
