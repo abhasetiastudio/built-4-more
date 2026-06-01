@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { FilmGrain } from "@/components/landing/FilmGrain";
-import { LandingFooter } from "@/components/landing/LandingFooter";
 import { LandingNav } from "@/components/landing/LandingNav";
 import { site } from "@/lib/constants";
 
@@ -20,7 +20,7 @@ export default function LandingLayout({
       <FilmGrain />
       <LandingNav />
       <main>{children}</main>
-      <LandingFooter />
+      <Footer />
     </>
   );
 }

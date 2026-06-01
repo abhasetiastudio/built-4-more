@@ -4,6 +4,7 @@ import { Section, SectionLabel, SectionTitle } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { FounderBlock } from "@/components/founder/FounderBlock";
 import { CourtAccent } from "@/components/visuals/CourtAccent";
+import { founder } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Our Mentors",
@@ -105,7 +106,7 @@ export default function AboutPage() {
             </span>
           </blockquote>
           <p className="mt-8 text-sm uppercase tracking-[0.2em] text-muted">
-            — Mentor Corps · Grade 10
+            — {founder.name}, {founder.title}
           </p>
         </div>
       </Section>

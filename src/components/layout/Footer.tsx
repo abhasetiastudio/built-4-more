@@ -14,6 +14,9 @@ export function Footer() {
                 {site.name.toUpperCase()}
               </span>
             </Link>
+            <p className="mt-3 whitespace-pre-line text-xs uppercase tracking-[0.2em] text-muted">
+              {site.tagline}
+            </p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
               High school basketball players mentor elementary students—building
               confidence, teamwork, and leadership on both sides of the court.

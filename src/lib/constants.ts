@@ -2,8 +2,8 @@ export const site = {
   name: "Built 4 More",
   tagline: "BUILT TO COMPETE.\nBUILT TO LEAD.",
   email: "built4more@abhasetia.studio",
-  phone: "(555) 123-4567",
-  location: "Greater Metro Area",
+  phone: "(248) 697-8137",
+  location: "Northville",
 } as const;
 
 /** Header nav — same on homepage and all inner pages */
