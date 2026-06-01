@@ -7,7 +7,7 @@ import { FaqAccordion } from "@/components/faq/FaqAccordion";
 export const metadata: Metadata = {
   title: "Parent FAQ",
   description:
-    "FAQ for parents of elementary students and families with high schoolers interested in Mentor Corps.",
+    "FAQ for parents of elementary students and families with high schoolers interested in Built 4 More.",
 };
 
 export default function FaqPage() {
@@ -22,7 +22,7 @@ export default function FaqPage() {
             <span className="text-gradient-gold">TEEN MENTORS & YOUR KID</span>
           </>
         }
-        subtitle="Straight answers for parents considering Built 4 More—and for high school players wondering what Mentor Corps involves."
+        subtitle="Straight answers for parents considering Built 4 More—and for high school players wondering what Built 4 More involves."
       />
 
       <Section>

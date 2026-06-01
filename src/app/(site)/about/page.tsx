@@ -9,7 +9,7 @@ import { founder } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Our Mentors",
   description:
-    "Meet Abir Bajaj, founder of Built 4 More, and the high school Mentor Corps who lead elementary students on the court.",
+    "Meet Abir Bajaj, founder of Built 4 More, and the high school players who bring the program to life for elementary students on the court.",
 };
 
 const mentorTraits = [
@@ -37,7 +37,7 @@ export default function AboutPage() {
             <span className="text-gradient-gold">MENTORS</span>
           </>
         }
-        subtitle="Abir Bajaj built the vision. High school players in Mentor Corps bring it to life on the court for elementary kids."
+        subtitle="Abir Bajaj built the vision. High school players in Built 4 More bring it to life on the court for elementary kids."
       />
 
       <Section className="overflow-hidden">
@@ -48,7 +48,7 @@ export default function AboutPage() {
       <div className="gold-line mx-auto max-w-7xl px-5 sm:px-8 md:px-10 lg:px-16" />
 
       <Section>
-        <SectionLabel>Mentor Corps</SectionLabel>
+        <SectionLabel>Built 4 More</SectionLabel>
         <SectionTitle>WHO LEADS ON THE COURT</SectionTitle>
         <p className="mt-4 max-w-2xl text-muted">
           These are the high school basketball players who run sessions for
@@ -64,7 +64,7 @@ export default function AboutPage() {
                   9TH–12TH
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted">
-                  Grade · Mentor Corps
+                  Grade · Built 4 More
                 </p>
                 <p className="mt-8 font-[family-name:var(--font-bebas)] text-4xl leading-tight tracking-wide">
                   TEACHING
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <SectionLabel>Join</SectionLabel>
           <SectionTitle>PLAY IN HIGH SCHOOL? LEAD HERE.</SectionTitle>
           <p className="mt-6 max-w-lg text-muted">
-            Apply for Mentor Corps or sign your elementary student up for Court
+            Apply for Built 4 More or sign your elementary student up for Court
             Sessions or Hoop Lab.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">

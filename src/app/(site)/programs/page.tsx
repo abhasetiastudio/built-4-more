@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section, SectionLabel, SectionTitle } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { programs } from "@/lib/constants";
+import { CourtAccent } from "@/components/visuals/CourtAccent";
 
 export const metadata: Metadata = {
   title: "Programs",
   description:
-    "Court Sessions and Hoop Lab for elementary students. Mentor Corps for high school basketball players who want to lead.",
+    "Court Sessions and Hoop Lab for elementary students. Built 4 More for high school basketball players who want to lead.",
 };
 
 export default function ProgramsPage() {
@@ -22,53 +22,30 @@ export default function ProgramsPage() {
             <span className="text-gradient-gold">LED BY BIG ONES.</span>
           </>
         }
-        subtitle="Elementary programs are mentored by high school players. Mentor Corps is where those players learn to lead."
+        subtitle="Elementary programs are mentored by high school players. Built 4 More is where those players learn to lead."
       />
 
-      <Section>
-        <div className="space-y-8">
-          {programs.map((program, index) => (
-            <article
-              key={program.id}
-              id={program.id}
-              className="group relative overflow-hidden rounded-2xl border border-border transition-colors hover:border-gold/30"
-            >
-              <div className="grid lg:grid-cols-5">
-                <div className="flex items-center justify-center bg-surface-elevated p-8 lg:col-span-2">
-                  <div className="text-center lg:text-left">
-                    <span className="font-[family-name:var(--font-bebas)] text-8xl text-gold/20 transition-colors group-hover:text-gold/40">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-2 text-xs uppercase tracking-[0.25em] text-gold">
-                      {program.ages}
-                    </p>
-                  </div>
-                </div>
-                <div className="p-8 lg:col-span-3 lg:p-10">
-                  <h2 className="font-[family-name:var(--font-bebas)] text-4xl tracking-wide md:text-5xl">
-                    {program.name.toUpperCase()}
-                  </h2>
-                  <p className="mt-2 text-sm uppercase tracking-[0.2em] text-muted">
-                    {program.duration}
-                  </p>
-                  <p className="mt-6 leading-relaxed text-muted">
-                    {program.description}
-                  </p>
-                  <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-                    {program.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="flex items-start gap-2 text-sm text-foreground/90"
-                      >
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </article>
-          ))}
+      <Section className="overflow-hidden">
+        <CourtAccent type="arc" placement="top-right" opacity="opacity-[0.04]" gold />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,98,0.06),transparent_65%)]" />
+
+        <div className="relative mx-auto max-w-3xl text-center">
+          <div className="court-card-wash relative overflow-hidden rounded-2xl border border-gold/20 bg-surface/40 px-8 py-14 sm:px-12 sm:py-20">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,98,0.1),transparent_70%)]" />
+            <div className="relative">
+              <SectionLabel>Programs</SectionLabel>
+              <p className="font-[family-name:var(--font-bebas)] text-[clamp(3rem,10vw,5.5rem)] leading-[0.92] tracking-wide">
+                COMING
+                <br />
+                <span className="text-gradient-gold">SOON ...</span>
+              </p>
+              <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-muted sm:text-base">
+                Court Sessions, Hoop Lab, and more—full details are on the way.
+                Register for Leadership Week while we build out the rest.
+              </p>
+              <div className="mx-auto mt-8 h-px w-16 bg-gold/40" />
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -80,7 +57,7 @@ export default function ProgramsPage() {
           </SectionTitle>
           <p className="mx-auto mt-6 max-w-lg text-muted">
             Parents: register your K–7 student. High school players: apply for
-            Mentor Corps. We&apos;ll follow up with dates and details.
+            Built 4 More. We&apos;ll follow up with dates and details.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button href="/register">Register Student</Button>

@@ -22,7 +22,7 @@ export function ContactForm() {
           APPLICATION RECEIVED
         </p>
         <p className="mt-4 text-muted">
-          Thanks—we&apos;ll follow up within 48 hours with Mentor Corps next steps.
+          Thanks—we&apos;ll follow up within 48 hours with Built 4 More next steps.
         </p>
       </motion.div>
     );
@@ -109,7 +109,7 @@ export function ContactForm() {
         whileTap={{ scale: 0.98 }}
         className="w-full rounded-full bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-background transition-colors hover:bg-gold-light sm:w-auto sm:px-12"
       >
-        Apply for Mentor Corps
+        Apply for Built 4 More
       </motion.button>
     </form>
   );

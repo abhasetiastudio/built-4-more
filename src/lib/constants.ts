@@ -122,7 +122,7 @@ export const programs = [
   },
   {
     id: "mentor-corps",
-    name: "Mentor Corps",
+    name: "Built 4 More",
     ages: "High School · Grades 9–10+",
     duration: "Season-long commitment",
     description:
@@ -247,12 +247,12 @@ export const faqs = [
   {
     question: "Who are the mentors?",
     answer:
-      "High school basketball players—typically grades 9–12—who apply to Mentor Corps, complete leadership training, and mentor elementary students under adult supervision. They're not professional coaches; they're older athletes learning to lead by giving back.",
+      "High school basketball players—typically grades 9–12—who apply to Built 4 More, complete leadership training, and mentor elementary students under adult supervision. They're not professional coaches; they're older athletes learning to lead by giving back.",
   },
   {
     question: "What ages is this for?",
     answer:
-      "Elementary students are our focus: Hoop Lab (K–2), Court Sessions (grades 3–5), with room to grow. High school athletes join as mentors through Mentor Corps.",
+      "Elementary students are our focus: Hoop Lab (K–2), Court Sessions (grades 3–5), with room to grow. High school athletes join as mentors through Built 4 More.",
   },
   {
     question: "Does my child need basketball experience?",
@@ -272,7 +272,7 @@ export const faqs = [
   {
     question: "Can my high schooler become a mentor?",
     answer:
-      "Yes—if they're on a school or club basketball team and ready to commit for the season. Apply through Contact and we'll share Mentor Corps requirements and training dates.",
+      "Yes—if they're on a school or club basketball team and ready to commit for the season. Apply through Contact and we'll share Built 4 More requirements and training dates.",
   },
 ] as const;
 

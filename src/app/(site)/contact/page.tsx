@@ -5,16 +5,16 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { site } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Mentor Corps",
+  title: "Built 4 More",
   description:
-    "Apply as a high school mentor for Built 4 More Mentor Corps.",
+    "Apply as a high school mentor for Built 4 More.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageHeader
-        label="Mentor Corps"
+        label="Built 4 More"
         title={
           <>
             STEP UP
@@ -22,7 +22,7 @@ export default function ContactPage() {
             <span className="text-gradient-gold">TO MENTOR</span>
           </>
         }
-        subtitle="High school basketball players: apply for Mentor Corps. We'll get back to you within 48 hours with training dates and requirements."
+        subtitle="High school basketball players: apply for Built 4 More. We'll get back to you within 48 hours with training dates and requirements."
       />
 
       <Section>

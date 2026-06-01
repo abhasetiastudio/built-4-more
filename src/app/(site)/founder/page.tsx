@@ -65,7 +65,7 @@ export default function FounderPage() {
           <SectionLabel>Connect</SectionLabel>
           <SectionTitle>WORK WITH BUILT 4 MORE</SectionTitle>
           <p className="mt-6 max-w-lg text-muted">
-            Sign up your elementary student, apply for Mentor Corps, or reach
+            Sign up your elementary student, apply for Built 4 More, or reach
             out with questions about the program.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">

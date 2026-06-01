@@ -86,7 +86,7 @@ export default function RegisterPage() {
                   href="/contact"
                   className="mt-1 block text-sm text-foreground transition-colors hover:text-gold"
                 >
-                  Apply for Mentor Corps →
+                  Apply for Built 4 More →
                 </a>
               </li>
             </ul>
