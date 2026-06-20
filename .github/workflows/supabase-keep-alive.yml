@@ -1,14 +1,17 @@
 # Pings Supabase on a schedule so free-tier projects stay active (avoid auto-pause).
 #
 # Required repo secrets (Settings → Secrets and variables → Actions):
-#   SUPABASE_URL       — e.g. https://YOUR-PROJECT.supabase.co
-#   SUPABASE_ANON_KEY  — anon public key from Supabase → Project Settings → API
+#   Production:
+#     SUPABASE_URL
+#     SUPABASE_ANON_KEY
+#   Dev:
+#     SUPABASE_DEV_URL
+#     SUPABASE_DEV_ANON_KEY
 #
 # Local test (from project root):
 #   source .env.local
-#   export SUPABASE_URL="$NEXT_PUBLIC_SUPABASE_URL"
-#   export SUPABASE_ANON_KEY="$NEXT_PUBLIC_SUPABASE_ANON_KEY"
-#   curl -s "${SUPABASE_URL}/auth/v1/health" -H "apikey: ${SUPABASE_ANON_KEY}"
+#   curl -s "${NEXT_PUBLIC_SUPABASE_URL}/auth/v1/health" \
+#     -H "apikey: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}"
 
 name: Supabase Keep Alive
 
@@ -19,20 +22,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping:
+  ping-prod:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase health endpoint
+      - name: Ping production Supabase
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          PROJECT_LABEL: production
         run: |
           if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
             echo "Missing SUPABASE_URL or SUPABASE_ANON_KEY repository secrets."
             exit 1
           fi
 
-          # /rest/v1/ often returns 401 without a table path — use auth health instead.
+          echo "Pinging ${PROJECT_LABEL}…"
+
           response=$(curl -s -w "\n%{http_code}" \
             "${SUPABASE_URL}/auth/v1/health" \
             -H "apikey: ${SUPABASE_ANON_KEY}")
@@ -40,13 +45,47 @@ jobs:
           status=$(echo "$response" | tail -n1)
           body=$(echo "$response" | sed '$d')
 
-          echo "Supabase responded with HTTP ${status}"
+          echo "${PROJECT_LABEL} responded with HTTP ${status}"
           echo "Body: ${body}"
 
           if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
-            echo "Keep-alive ping succeeded."
+            echo "Keep-alive ping succeeded (${PROJECT_LABEL})."
             exit 0
           fi
 
-          echo "Unexpected response — check project is not paused and secrets match Supabase → API."
+          echo "Unexpected response — check ${PROJECT_LABEL} project and secrets."
+          exit 1
+
+  ping-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping dev Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_DEV_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_DEV_ANON_KEY }}
+          PROJECT_LABEL: dev
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "Missing SUPABASE_DEV_URL or SUPABASE_DEV_ANON_KEY repository secrets."
+            exit 1
+          fi
+
+          echo "Pinging ${PROJECT_LABEL}…"
+
+          response=$(curl -s -w "\n%{http_code}" \
+            "${SUPABASE_URL}/auth/v1/health" \
+            -H "apikey: ${SUPABASE_ANON_KEY}")
+
+          status=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+
+          echo "${PROJECT_LABEL} responded with HTTP ${status}"
+          echo "Body: ${body}"
+
+          if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
+            echo "Keep-alive ping succeeded (${PROJECT_LABEL})."
+            exit 0
+          fi
+
+          echo "Unexpected response — check ${PROJECT_LABEL} project and secrets."
           exit 1
