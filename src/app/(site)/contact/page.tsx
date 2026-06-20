@@ -48,7 +48,11 @@ export default function ContactPage() {
               </li>
               <li>
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">Phone</p>
-                <p className="mt-1">{site.phone}</p>
+                {site.phones.map((phone) => (
+                  <p key={phone} className="mt-1">
+                    {phone}
+                  </p>
+                ))}
               </li>
               <li>
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">Parents</p>

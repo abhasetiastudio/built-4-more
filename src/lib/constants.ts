@@ -2,7 +2,7 @@ export const site = {
   name: "Built 4 More",
   tagline: "BUILT TO COMPETE.\nBUILT TO LEAD.",
   email: "built4more@abhasetia.studio",
-  phone: "(248) 697-8137",
+  phones: ["(248) 697-8137", "(732) 939-9985"],
   location: "Northville",
 } as const;
 

@@ -74,7 +74,9 @@ export function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li>{site.phone}</li>
+              {site.phones.map((phone) => (
+                <li key={phone}>{phone}</li>
+              ))}
               <li>{site.location}</li>
             </ul>
           </div>
